@@ -1,3 +1,3 @@
-# 五等分のCSS Animation
+# 五等分のCSS
 
 ![](gotoubun_roulette.gif)
