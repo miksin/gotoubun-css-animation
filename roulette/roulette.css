@@ -10,7 +10,7 @@
   height: 100%;
   border-radius: 50%;
   overflow: hidden;
-  /* animation: rot-roulette 10s cubic-bezier(0,.65,.92,.42) 0s infinite forwards; */
+  animation: rot-roulette 10s cubic-bezier(0,.65,.92,.42) 0s infinite forwards;
 }
 
 .sector {
