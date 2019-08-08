@@ -2,7 +2,7 @@
 
 ![](gotoubun_css_logo.png)
 
-![](gotoubun_roulette.gif)
+![](gotoubun_demo.gif)
 
 Pure CSS loading animation with 「五等分の花嫁」 theme.
 
