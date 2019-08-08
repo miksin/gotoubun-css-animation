@@ -19,4 +19,5 @@
         <rect width="51" height="51" fill="#FFF" />
         <path d="M50,50 A1 1,0 0 1,0 50" fill="#FFF" />
     </g>
+    <!-- create by miksin@https://github.com/miksin/gotoubun-css-animation -->
 </svg>

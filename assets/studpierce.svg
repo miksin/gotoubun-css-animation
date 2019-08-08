@@ -2,4 +2,5 @@
     <circle fill="#FFF" cx="27" cy="27" r="25"/>
     <path d="M23,23 L90,90" stroke="#FFF" stroke-width="8px" fill="none" />
     <path d="M55,80 A20 20,0 0 1,80 55" stroke="#FFF" stroke-width="10px" fill="none" />
+    <!-- create by miksin@https://github.com/miksin/gotoubun-css-animation -->
 </svg>
