@@ -1,0 +1,22 @@
+<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+    <g transform="scale(0.6) translate(88,88)">
+        <path d="M50,0 A1 1,0 0 1,50 50" fill="#FFF" />
+        <rect width="51" height="51" fill="#FFF" />
+        <path d="M50,50 A1 1,0 0 1,0 50" fill="#FFF" />
+    </g>
+    <g transform="scale(0.6) translate(80,88) rotate(90)">
+        <path d="M50,0 A1 1,0 0 1,50 50" fill="#FFF" />
+        <rect width="51" height="51" fill="#FFF" />
+        <path d="M50,50 A1 1,0 0 1,0 50" fill="#FFF" />
+    </g>
+    <g transform="scale(0.6) translate(80,76) rotate(180)">
+        <path d="M50,0 A1 1,0 0 1,50 50" fill="#FFF" />
+        <rect width="51" height="51" fill="#FFF" />
+        <path d="M50,50 A1 1,0 0 1,0 50" fill="#FFF" />
+    </g>
+    <g transform="scale(0.6) translate(88,76) rotate(270)">
+        <path d="M50,0 A1 1,0 0 1,50 50" fill="#FFF" />
+        <rect width="51" height="51" fill="#FFF" />
+        <path d="M50,50 A1 1,0 0 1,0 50" fill="#FFF" />
+    </g>
+</svg>

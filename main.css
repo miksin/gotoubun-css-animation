@@ -1,0 +1,10 @@
+@import url(coin.css);
+
+body {
+  margin: 0;
+}
+
+#coin-container {
+  width: 100px;
+  height: 100px;
+}
