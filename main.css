@@ -1,6 +1,7 @@
 @import url(coin.css);
 @import url(roulette.css);
 @import url(ellipsis.css);
+@import url(eatsuki.css);
 
 *, *::before, *::after {
   box-sizing: inherit;
