@@ -92,12 +92,12 @@
 }
 
 @keyframes eat-top {
-  0% { transform: rotate(0deg); }
+  0% { transform: rotate(-1deg); }
   100% { transform: rotate(-45deg); }
 }
 
 @keyframes eat-bot {
-  0% { transform: rotate(0deg); }
+  0% { transform: rotate(1deg); }
   100% { transform: rotate(45deg); }
 }
 
