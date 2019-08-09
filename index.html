@@ -10,48 +10,122 @@
 <body>
   <div class="choco-block header">
     <img class="logo" src="gotoubun_css_logo.png" alt="" />
+    <a
+      style="margin-top: 12px"
+      target="_blank"
+      rel="noopener noreferrer"
+      href="https://github.com/miksin/gotoubun-css-animation"
+      class="btn outlined dark"
+    >
+      View on Github
+    </a>
   </div>
-  <div class="choco-block main-container">
-    <div style="flex-grow: 1; min-width: 100px;" class="demo-item">
-      <div class="coin-container ar-container">
-        <div class="coin-space">
-          <div class="coin">
-            <div class="coin-front"></div>
-            <div class="coin-back"></div>
+
+  <div class="choco-block">
+    <div class="block-header">
+      <h2 class="font-grey">Loaders</h2>
+    </div>
+    <div class="main-container">
+      <div class="demo-item small">
+          <div class="coin-container ar-container">
+            <div class="coin-space">
+              <div class="coin">
+                <div class="coin-front"></div>
+                <div class="coin-back"></div>
+              </div>
+            </div>
           </div>
+          <div class="demo-event-wrapper" onclick="handleFillModal('coin')"></div>
         </div>
-      </div>
-      <div class="demo-event-wrapper"></div>
-    </div>
-    <div style="flex-grow: 5; min-width: 500px;" class="demo-item">
-      <div class="ellipsis-container ar-container">
-        <div class="ellipsis">
-          <div class="ellipsis-dot ichika"><img src="assets/studpierce.svg" alt="" /></div>
-          <div class="ellipsis-dot nino" ><img src="assets/hairacc.svg" alt="" /></div>
-          <div class="ellipsis-dot miku"><img src="assets/earphone.svg" alt="" /></div>
-          <div class="ellipsis-dot yotsuba"><img src="assets/ribbon.svg" alt="" /></div>
-          <div class="ellipsis-dot itsuki"><img src="assets/star.svg" alt="" /></div>
+        <div class="demo-item small">
+          <div class="roulette-container ar-container">
+            <div class="roulette">
+              <div class="sector ichika"></div>
+              <div class="sector nino"></div>
+              <div class="sector miku"></div>
+              <div class="sector yotsuba"></div>
+              <div class="sector itsuki"></div>
+              <div class="symbol ichika"><img src="assets/studpierce.svg" alt="" class="symbol" /></div>
+              <div class="symbol nino"><img src="assets/hairacc.svg" alt="" class="symbol" /></div>
+              <div class="symbol miku"><img src="assets/earphone.svg" alt="" class="symbol" /></div>
+              <div class="symbol yotsuba"><img src="assets/ribbon.svg" alt="" class="symbol" /></div>
+              <div class="symbol itsuki"><img src="assets/star.svg" alt="" class="symbol" /></div>
+            </div>
+          </div>
+          <div class="demo-event-wrapper" onclick="handleFillModal('roulette')"></div>
         </div>
-      </div>
-      <div class="demo-event-wrapper"></div>
-    </div>
-    <div style="flex-grow: 2; min-width: 150px;" class="demo-item">
-      <div class="roulette-container ar-container">
-        <div class="roulette">
-          <div class="sector ichika"></div>
-          <div class="sector nino"></div>
-          <div class="sector miku"></div>
-          <div class="sector yotsuba"></div>
-          <div class="sector itsuki"></div>
-          <div class="symbol ichika"><img src="assets/studpierce.svg" alt="" class="symbol" /></div>
-          <div class="symbol nino"><img src="assets/hairacc.svg" alt="" class="symbol" /></div>
-          <div class="symbol miku"><img src="assets/earphone.svg" alt="" class="symbol" /></div>
-          <div class="symbol yotsuba"><img src="assets/ribbon.svg" alt="" class="symbol" /></div>
-          <div class="symbol itsuki"><img src="assets/star.svg" alt="" class="symbol" /></div>
+        <div class="demo-item wide">
+          <div class="ellipsis-container ar-container">
+            <div class="ellipsis">
+              <div class="ellipsis-dot ichika"><img src="assets/studpierce.svg" alt="" /></div>
+              <div class="ellipsis-dot nino" ><img src="assets/hairacc.svg" alt="" /></div>
+              <div class="ellipsis-dot miku"><img src="assets/earphone.svg" alt="" /></div>
+              <div class="ellipsis-dot yotsuba"><img src="assets/ribbon.svg" alt="" /></div>
+              <div class="ellipsis-dot itsuki"><img src="assets/star.svg" alt="" /></div>
+            </div>
+          </div>
+          <div class="demo-event-wrapper" onclick="handleFillModal('ellipsis')"></div>
         </div>
-      </div>
-      <div class="demo-event-wrapper"></div>
     </div>
   </div>
+
+  <div class="choco-block">
+    <div class="block-header">
+      <h2 class="font-grey">Materials</h2>
+      <h5 class="font-grey" style="margin-left: 8px">(click and download)</h5>
+    </div>
+    <div class="material-container">
+      <a class="demo-img bg-ichika"><img src="assets/studpierce.svg" alt="" /></a>
+      <a class="demo-img bg-nino"><img src="assets/hairacc.svg" alt="" /></a>
+      <a class="demo-img bg-miku"><img src="assets/earphone.svg" alt="" /></a>
+      <a class="demo-img bg-yotsuba"><img src="assets/ribbon.svg" alt="" /></a>
+      <a class="demo-img bg-itsuki"><img src="assets/star.svg" alt="" /></a>
+      <a class="demo-img bg-ichika"><img src="assets/pierce.svg" alt="" /></a>
+      <a class="demo-img bg-yotsuba"><img src="assets/clover.svg" alt="" /></a>
+    </div>
+  </div>
+
+  <footer>
+    <p style="color: #fff">
+      Create by&nbsp;
+      <a
+        style="color: #fff"
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://miksin.github.io"
+        class="inline"
+      >
+        @miksin
+      </a>
+    </p>
+  </footer>
+  <div id="detail-modal" class="wrapper">
+    <div class="event-wrapper" onclick="handleCloseModal()"></div>
+    <div class="modal">
+      <textarea
+        style="border-bottom: 2px solid #bdbdbd"
+        class="fullsize"
+        rows="15"
+        spellcheck="false"
+        id="css-board"
+      ></textarea>
+      <textarea
+        class="fullsize"
+        rows="15"
+        id="html-board"
+        spellcheck="false"
+      ></textarea>
+      <span style="top: 1%; right: 18px;" class="chip">CSS</span>
+      <span style="top: 51%; right: 18px;" class="chip">HTML</span>
+      <img
+        class="back-btn"
+        style="width: 24px; top: -28px; right: 0"
+        src="cross.svg"
+        alt="back"
+        onclick="handleCloseModal()"
+      />
+    </div>
+  </div>
+  <script src="main.js"></script>
 </body>
 </html>

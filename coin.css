@@ -1,3 +1,20 @@
+.ar-container {
+  position: relative;
+  width: 100%;
+}
+
+.ar-container::before {
+  float: left;
+  content: "";
+  height: 0;
+}
+
+.ar-container::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 .coin-container {
   padding-top: 100%;
 }
