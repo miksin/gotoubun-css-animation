@@ -7,6 +7,7 @@
 @supports (--custom:property) {
   [style*="--aspect-ratio"] {
     position: relative;
+    width: 100%;
   }
   [style*="--aspect-ratio"]::before {
     content: "";
@@ -22,8 +23,6 @@
 }
 
 .eatsuki-container {
-  width: 100%;
-  position: relative;
   margin-top: 10%;
 }
 

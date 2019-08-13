@@ -1,6 +1,7 @@
 .ar-container {
   position: relative;
   width: 100%;
+  margin: auto;
 }
 
 .ar-container::before {

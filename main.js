@@ -1,3 +1,24 @@
+const blockContents = {
+  loaders: [
+    {
+      name: 'coin',
+      container: 'small',
+    },
+    {
+      name: 'roulette',
+      container: 'small',
+    },
+    {
+      name: 'eatsuki',
+      container: 'wide',
+    },
+    {
+      name: 'ellipsis',
+      container: 'wide',
+    },
+  ],
+};
+
 function handleCloseModal() {
   const el = document.getElementById('detail-modal');
   el.classList.remove('show');
@@ -34,6 +55,37 @@ async function handleFillModal(target) {
   }
 }
 
+async function loadContents() {
+  for (const block in blockContents) {
+    const promiseList = [];
+    const contentList = blockContents[block];
+    
+    const blockEl = document.getElementById(block);
+    if (blockEl === null) { continue }
+
+    for (let i = 0; i < contentList.length; i += 1) {
+      const content = contentList[i];
+      const containerEl = document.createElement('div');
+      containerEl.classList.add('demo-item');
+      containerEl.classList.add(content.container);
+
+      const promise = fetchFile(`${content.name}.html`).then((text) => new Promise((resolve) => {
+        containerEl.insertAdjacentHTML('afterbegin', text);
+        containerEl.insertAdjacentHTML('beforeend',
+          `<div class="demo-event-wrapper" onclick="handleFillModal('${content.name}')"></div>`);
+        resolve(containerEl);
+      }));
+
+      promiseList.push(promise);
+    }
+
+    const containerEls = await Promise.all(promiseList);
+    containerEls.forEach((el) => {
+      blockEl.appendChild(el);
+    });
+  }
+}
+
 function createDemoImgLink() {
   const els = document.getElementsByClassName('demo-img');
   for (let i = 0; i < els.length; i++) {
@@ -45,4 +97,9 @@ function createDemoImgLink() {
   }
 }
 
-createDemoImgLink();
+function init() {
+  createDemoImgLink();
+  loadContents();
+}
+
+init();
