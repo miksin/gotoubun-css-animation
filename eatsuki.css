@@ -3,7 +3,7 @@
 }
 [style*="--aspect-ratio"] > img {  
   height: auto;
-} 
+}
 @supports (--custom:property) {
   [style*="--aspect-ratio"] {
     position: relative;

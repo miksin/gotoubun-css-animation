@@ -41,10 +41,12 @@
 }
 
 .coin-front {
+  background: no-repeat center/60% #FCDD51 url(assets/studpierce.svg);
   animation: change-f 20s linear 0s infinite forwards;
 }
 
 .coin-back {
+  background: no-repeat center/60% #C6ABD4 url(assets/hairacc.svg);
   transform: rotateY(180deg);
   animation: change-b 20s linear 0s infinite forwards;
 }
