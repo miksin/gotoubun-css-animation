@@ -26,45 +26,73 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  animation: shake 0.5s ease-in-out 0s infinite alternate;
+  -webkit-animation: shake 0.5s ease-in-out 0s infinite alternate;
+          animation: shake 0.5s ease-in-out 0s infinite alternate;
 }
 
 .coin {
   position: absolute;
   width: 100%;
   height: 100%;
+  -webkit-transition: -webkit-transform 0.6s;
+  transition: -webkit-transform 0.6s;
+  -o-transition: transform 0.6s;
   transition: transform 0.6s;
-  transform-style: preserve-3d;
-  animation: rot-y 4s linear 0s infinite forwards;
+  transition: transform 0.6s, -webkit-transform 0.6s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-animation: rot-y 4s linear 0s infinite forwards;
+          animation: rot-y 4s linear 0s infinite forwards;
   border-radius: 50%;
-  box-shadow: 0px 5px 2px 0px rgba(0, 0, 0, .2);
+  -webkit-box-shadow: 0px 5px 2px 0px rgba(0, 0, 0, .2);
+          box-shadow: 0px 5px 2px 0px rgba(0, 0, 0, .2);
 }
 
 .coin-front {
   background: no-repeat center/60% #FCDD51 url(assets/studpierce.svg);
-  animation: change-f 20s linear 0s infinite forwards;
+  -webkit-animation: change-f 20s linear 0s infinite forwards;
+          animation: change-f 20s linear 0s infinite forwards;
 }
 
 .coin-back {
   background: no-repeat center/60% #C6ABD4 url(assets/hairacc.svg);
-  transform: rotateY(180deg);
-  animation: change-b 20s linear 0s infinite forwards;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  -webkit-animation: change-b 20s linear 0s infinite forwards;
+          animation: change-b 20s linear 0s infinite forwards;
 }
 
 .coin-front, .coin-back {
   position: absolute;
   width: 100%;
   height: 100%;
-  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
   border-radius: 50%;
 }
 
+@-webkit-keyframes rot-y {
+  0%,40% { -webkit-transform: translate(0,0) rotateY(0); transform: translate(0,0) rotateY(0); }
+  50%,90% { -webkit-transform: translate(0,0) rotateY(180deg); transform: translate(0,0) rotateY(180deg); }
+  100% { -webkit-transform: translate(0,0) rotateY(360deg); transform: translate(0,0) rotateY(360deg); }
+  45% { -webkit-transform: translate(0, 0) rotateY(90deg); transform: translate(0, 0) rotateY(90deg); }
+  95% { -webkit-transform: translate(0, 0) rotateY(270deg); transform: translate(0, 0) rotateY(270deg); }
+}
+
 @keyframes rot-y {
-  0%,40% { transform: translate(0,0) rotateY(0); }
-  50%,90% { transform: translate(0,0) rotateY(180deg); }
-  100% { transform: translate(0,0) rotateY(360deg); }
-  45% { transform: translate(0, 0) rotateY(90deg); }
-  95% { transform: translate(0, 0) rotateY(270deg); }
+  0%,40% { -webkit-transform: translate(0,0) rotateY(0); transform: translate(0,0) rotateY(0); }
+  50%,90% { -webkit-transform: translate(0,0) rotateY(180deg); transform: translate(0,0) rotateY(180deg); }
+  100% { -webkit-transform: translate(0,0) rotateY(360deg); transform: translate(0,0) rotateY(360deg); }
+  45% { -webkit-transform: translate(0, 0) rotateY(90deg); transform: translate(0, 0) rotateY(90deg); }
+  95% { -webkit-transform: translate(0, 0) rotateY(270deg); transform: translate(0, 0) rotateY(270deg); }
+}
+
+@-webkit-keyframes change-f {
+  0%,10%,91%,100% { background: no-repeat center/60% #FCDD51 url(assets/studpierce.svg); }
+  11%,30% { background: no-repeat center/60% #95C1E6 url(assets/earphone.svg); }
+  31%,50% { background: no-repeat center/60% #EE8893 url(assets/star.svg); }
+  51%,70% { background: no-repeat center/60% #C6ABD4 url(assets/hairacc.svg); }
+  71%,90% { background: no-repeat center/60% #A5CD6C url(assets/ribbon.svg); }
 }
 
 @keyframes change-f {
@@ -75,6 +103,14 @@
   71%,90% { background: no-repeat center/60% #A5CD6C url(assets/ribbon.svg); }
 }
 
+@-webkit-keyframes change-b {
+  0%,20% { background: no-repeat center/60% #C6ABD4 url(assets/hairacc.svg); }
+  21%,40% { background: no-repeat center/60% #A5CD6C url(assets/ribbon.svg); }
+  41%,60% { background: no-repeat center/60% #FCDD51 url(assets/studpierce.svg); }
+  61%,80% { background: no-repeat center/60% #95C1E6 url(assets/earphone.svg); }
+  81%,100% { background: no-repeat center/60% #EE8893 url(assets/star.svg); }
+}
+
 @keyframes change-b {
   0%,20% { background: no-repeat center/60% #C6ABD4 url(assets/hairacc.svg); }
   21%,40% { background: no-repeat center/60% #A5CD6C url(assets/ribbon.svg); }
@@ -83,7 +119,12 @@
   81%,100% { background: no-repeat center/60% #EE8893 url(assets/star.svg); }
 }
 
+@-webkit-keyframes shake {
+  0% { -webkit-transform: translate(0, 0); transform: translate(0, 0); }
+  100% { -webkit-transform: translate(0, 5%); transform: translate(0, 5%); }
+}
+
 @keyframes shake {
-  0% { transform: translate(0, 0); }
-  100% { transform: translate(0, 5%); }
+  0% { -webkit-transform: translate(0, 0); transform: translate(0, 0); }
+  100% { -webkit-transform: translate(0, 5%); transform: translate(0, 5%); }
 }

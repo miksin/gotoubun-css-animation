@@ -28,54 +28,78 @@
   height: 100%;
   border-radius: 50%;
   overflow: hidden;
-  animation: rot-roulette 10s cubic-bezier(0,.65,.92,.42) 0s infinite forwards;
+  -webkit-animation: rot-roulette 10s cubic-bezier(0,.65,.92,.42) 0s infinite forwards;
+          animation: rot-roulette 10s cubic-bezier(0,.65,.92,.42) 0s infinite forwards;
 }
 
 .sector {
   width: 50%;
   height: 50%;
-  transform-origin: 100% 100%;
+  -webkit-transform-origin: 100% 100%;
+      -ms-transform-origin: 100% 100%;
+          transform-origin: 100% 100%;
   position: absolute;
 }
 
 .sector.ichika {
-  transform: rotate(54deg) skew(18deg); 
+  -webkit-transform: rotate(54deg) skew(18deg);
+      -ms-transform: rotate(54deg) skew(18deg);
+          transform: rotate(54deg) skew(18deg); 
   background-color: #FCDD51;
 }
 
 .sector.nino {
-  transform: rotate(126deg) skew(18deg);
+  -webkit-transform: rotate(126deg) skew(18deg);
+      -ms-transform: rotate(126deg) skew(18deg);
+          transform: rotate(126deg) skew(18deg);
   background-color: #C6ABD4;
 }
 
 .sector.miku {
-  transform: rotate(198deg) skew(18deg);
+  -webkit-transform: rotate(198deg) skew(18deg);
+      -ms-transform: rotate(198deg) skew(18deg);
+          transform: rotate(198deg) skew(18deg);
   background-color: #95C1E6;
 }
 
 .sector.yotsuba {
-  transform: rotate(270deg) skew(18deg);
+  -webkit-transform: rotate(270deg) skew(18deg);
+      -ms-transform: rotate(270deg) skew(18deg);
+          transform: rotate(270deg) skew(18deg);
   background-color: #A5CD6C;
 }
 
 .sector.itsuki {
-  transform: rotate(342deg) skew(18deg);
+  -webkit-transform: rotate(342deg) skew(18deg);
+      -ms-transform: rotate(342deg) skew(18deg);
+          transform: rotate(342deg) skew(18deg);
   background-color: #EE8893;
 }
 
+@-webkit-keyframes rot-roulette {
+  0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+  20% { -webkit-transform: rotate(432deg); transform: rotate(432deg); }
+  40% { -webkit-transform: rotate(864deg); transform: rotate(864deg); }
+  60% { -webkit-transform: rotate(1296deg); transform: rotate(1296deg); }
+  80% { -webkit-transform: rotate(1728deg); transform: rotate(1728deg); }
+  100% { -webkit-transform: rotate(2160deg); transform: rotate(2160deg); }
+}
+
 @keyframes rot-roulette {
-  0% { transform: rotate(0deg); }
-  20% { transform: rotate(432deg); }
-  40% { transform: rotate(864deg); }
-  60% { transform: rotate(1296deg); }
-  80% { transform: rotate(1728deg); }
-  100% { transform: rotate(2160deg); }
+  0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+  20% { -webkit-transform: rotate(432deg); transform: rotate(432deg); }
+  40% { -webkit-transform: rotate(864deg); transform: rotate(864deg); }
+  60% { -webkit-transform: rotate(1296deg); transform: rotate(1296deg); }
+  80% { -webkit-transform: rotate(1728deg); transform: rotate(1728deg); }
+  100% { -webkit-transform: rotate(2160deg); transform: rotate(2160deg); }
 }
 
 div.symbol {
   width: 50%;
   height: 50%;
-  transform-origin: 100% 100%;
+  -webkit-transform-origin: 100% 100%;
+      -ms-transform-origin: 100% 100%;
+          transform-origin: 100% 100%;
   position: absolute;
 }
 
@@ -85,25 +109,37 @@ img.symbol {
   height: 40%;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%) rotate(135deg);
+  -webkit-transform: translate(-50%, -50%) rotate(135deg);
+      -ms-transform: translate(-50%, -50%) rotate(135deg);
+          transform: translate(-50%, -50%) rotate(135deg);
 }
 
 div.symbol.ichika {
-  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 div.symbol.nino {
-  transform: rotate(117deg);
+  -webkit-transform: rotate(117deg);
+      -ms-transform: rotate(117deg);
+          transform: rotate(117deg);
 }
 
 div.symbol.miku {
-  transform: rotate(189deg);
+  -webkit-transform: rotate(189deg);
+      -ms-transform: rotate(189deg);
+          transform: rotate(189deg);
 }
 
 div.symbol.yotsuba {
-  transform: rotate(261deg);
+  -webkit-transform: rotate(261deg);
+      -ms-transform: rotate(261deg);
+          transform: rotate(261deg);
 }
 
 div.symbol.itsuki {
-  transform: rotate(333deg);
+  -webkit-transform: rotate(333deg);
+      -ms-transform: rotate(333deg);
+          transform: rotate(333deg);
 }
